@@ -38,7 +38,7 @@ from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.shortcuts import redirect
-from django.urls import path
+# from django.urls import path
 from django.views.i18n import JavaScriptCatalog
 
 from account.decorators import login_exempt
@@ -63,12 +63,12 @@ urlpatterns = [
     # 国际化设置相关
     url(r"^console/i18n/", include("bk_i18n.urls")),
     # admin
-    path("admin/", admin.site.urls),
+    url("admin/", admin.site.urls),
 ]
 
 # 处理JS翻译
 urlpatterns += i18n_patterns(
-    path('console/jsi18n/i18n/', JavaScriptCatalog.as_view(), name='javascript-catalog'),
+    url('console/jsi18n/i18n/', JavaScriptCatalog.as_view(), name='javascript-catalog'),
 )
 
 # for upload/download

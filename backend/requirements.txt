@@ -1,4 +1,4 @@
-django==3.2.12
+django==1.11.29
 whitenoise==5.3.0
 requests==2.21.0
 gunicorn==19.9.0
