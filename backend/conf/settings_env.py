@@ -27,6 +27,8 @@ env = environ.Env()
 
 # Generic Django project settings
 DEBUG = env.bool("DEBUG", False)
+if not DEBUG:
+    STATIC_ROOT = "static"
 
 # 数据库配置信息
 DATABASES = {
