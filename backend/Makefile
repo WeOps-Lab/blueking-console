@@ -13,3 +13,7 @@ i18n_js:
 # compile django.po and djangojs.po to django.mo and djangojs.mo
 i18n_mo:
 	django-admin.py  compilemessages
+
+
+release-docker:
+	docker build -t blueking-console -f ./weops-supportfiles/Dockerfile .
